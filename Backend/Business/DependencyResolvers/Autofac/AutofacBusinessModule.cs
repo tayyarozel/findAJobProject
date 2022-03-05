@@ -10,6 +10,7 @@ using Core.Utilities.Interceptors;
 using Core.Utilities.Security.Jwt;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
+using Core.Utilities.Helpers;
 
 namespace Business.DependencyResolvers.Autofac
 {
@@ -18,8 +19,14 @@ namespace Business.DependencyResolvers.Autofac
         protected override void Load(ContainerBuilder builder)
         {
             //birisi senden IProductService isterse ona  ProductManager ver
+            builder.RegisterType<UserOperationClaimManager>().As<IUserOperationClaimService>();
 
+            builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>();
 
+            builder.RegisterType<OperationClaimManager>().As<IOperationClaimService>();
+            builder.RegisterType<EfOperationClaimDal>().As<IOperationClaimDal>();
+
+            builder.RegisterType<FileHelperManager>().As<IFileHelper>();
             builder.RegisterType<UserManager>().As<IUserService>();
             builder.RegisterType<EfUserDal>().As<IUserDal>();
 

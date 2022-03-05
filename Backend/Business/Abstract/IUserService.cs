@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
+using Entities.Dtos;
 
 namespace Business.Abstract
 {
@@ -20,5 +21,10 @@ namespace Business.Abstract
 
         IResult Update(User user);
         IResult Delete(User user);
+        IResult AvatarAdd(UserForAvatarUploadDto userForAvatarUploadDto);
+        IResult AvatarDelete(UserForAvatarUploadDto userForAvatarUploadDto);
+        IResult AvatarUpdate(UserForAvatarUploadDto userForAvatarUploadDto);
+
+        IResult PasswordUpdate(UserForPasswordUpdateDto userForPasswordUpdateDto);
     }
 }

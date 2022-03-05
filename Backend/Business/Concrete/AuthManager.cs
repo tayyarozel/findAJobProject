@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.RegularExpressions;
 using Business.Abstract;
 using Business.Constants;
 using Core.Entities.Concrete;
@@ -23,10 +24,17 @@ namespace Business.Concrete
         }
 
         //kullanıcı kayıt olma operasyonu
-        public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
+        public IDataResult<User> Register(UserForRegisterDto userForRegisterDto)
         {
+            Regex regex = new Regex(@"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$");
+            var result = regex.IsMatch(userForRegisterDto.Password);
+            if (!result)
+            {
+                return new ErrorDataResult<User>(Messages.UserPasswordWrong);
+            }
+
             byte[] passwordHash, passwordSalt;
-            HashingHelper.CreatePasswordHash(password,out passwordHash,out passwordSalt);// gelen şifre ile haş oluşturduk
+            HashingHelper.CreatePasswordHash(userForRegisterDto.Password, out passwordHash,out passwordSalt);// gelen şifre ile haş oluşturduk
             var user = new User
             {
                 Email = userForRegisterDto.Email,
@@ -35,7 +43,6 @@ namespace Business.Concrete
                 LastName = userForRegisterDto.LastName,
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt,
-                GenderId= userForRegisterDto.GenderId,
                 Status = true
             }; // user nesnesi oluşturduk
             _userService.Add(user); //ve ekledik
@@ -64,7 +71,6 @@ namespace Business.Concrete
         public IResult UserExists(string email)
         {
             
-
             if (_userService.GetByMail(email).Data!=null)
             {
                 return new ErrorResult(Messages.UserAlreadyExists);

@@ -8,7 +8,7 @@ namespace Core.Entities.Concrete
     public class User:IEntity
     {
         public int Id { get; set; }
-        public int GenderId { get; set; }
+        public string GenderId { get; set; }
         public int CityId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

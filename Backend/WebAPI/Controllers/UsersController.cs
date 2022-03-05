@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Entities.Concrete;
+using Entities.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -67,6 +68,50 @@ namespace WebAPI.Controllers
         public IActionResult Delete(User user)
         {
             var result = _userservice.Delete(user);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("avatar/add")]
+        public IActionResult AvatarAdd([FromForm] UserForAvatarUploadDto userForAvatarUploadDto)
+        {
+            var result = _userservice.AvatarAdd(userForAvatarUploadDto);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("avatar/update")]
+        public IActionResult AvatarUpdate([FromForm]  UserForAvatarUploadDto userForAvatarUploadDto)
+        {
+            var result = _userservice.AvatarUpdate(userForAvatarUploadDto);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("avatar/delete")]
+        public IActionResult AvatarDelete(UserForAvatarUploadDto userForAvatarUploadDto)
+        {
+            var result = _userservice.AvatarDelete(userForAvatarUploadDto);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("password")]
+        public IActionResult PasswordUpdate(UserForPasswordUpdateDto userForPasswordUpdateDto)
+        {
+            var result = _userservice.PasswordUpdate(userForPasswordUpdateDto);
             if (result.Success)
             {
                 return Ok(result);

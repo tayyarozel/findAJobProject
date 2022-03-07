@@ -1,0 +1,30 @@
+<div class="col-12 signupBack" >
+  <div class="row  justify-content-center p-5 ">
+    <div class="col-12 col-md-6 col-xl-3 mt-5 mb-5 border  shadow rounded-3 " style="background-color: #fff;" >
+      <main class="form-signup p-2">
+        <form [formGroup]="loginForm">
+          <div class="text-center mt-4">
+            <h1 class="h3 mb-5 ">Giriş Yap</h1>
+          </div>
+
+
+          <div class="form-floating  mt-4">
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="E-Posta" >
+            <label for="floatingInput">E-Posta </label>
+          </div>
+          <div class="form-floating mt-4 mb-4">
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Şifre">
+            <label for="floatingPassword">Şifre</label>
+          </div>
+
+
+
+          <button class="w-100 btn btn-lg btn-primary mb-4"  [disabled]="loginForm.invalid"  (click)="login()">Giriş yap</button>
+          <div class="mb-5 text-center">
+          <span>Yeni misiniz? <a routerLink="/signup"><strong style="color: #912da2;">Üye Ol</strong></a></span>
+        </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</div>

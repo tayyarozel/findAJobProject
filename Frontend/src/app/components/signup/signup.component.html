@@ -1,0 +1,41 @@
+<div class="col-12 signupBack m-0 p-0" >
+  <div class="row  justify-content-center p-0 m-0">
+    <div class="col-12 col-md-6 col-lg-3 mt-5 mb-5 border  shadow-lg rounded-3" style="background-color: #fff;" >
+      <main class="form-signup p-2">
+        <form [formGroup]="signupForm">
+          <div class="text-center mt-4">
+            <h1 class="h3 mb-5 ">Üye Ol</h1>
+          </div>
+
+          <div class="form-floating">
+            <input type="text" formControlName="firstName" class="form-control" id="firstName" placeholder="Ad">
+            <label for="floatingInput">Ad </label>
+          </div>
+          <div class="form-floating mt-4">
+            <input type="text" formControlName="lastName" class="form-control" id="lastName" placeholder="Soyad">
+            <label for="floatingInput">Soyad </label>
+          </div>
+          <div class="form-floating  mt-4">
+            <input type="email" formControlName="email" class="form-control" id="email" placeholder="E-Posta" >
+            <label for="floatingInput">E-Posta </label>
+          </div>
+          <div class="form-floating mt-4">
+            <input type="password" formControlName="password" class="form-control" id="password" placeholder="Şifre">
+            <label for="floatingPassword">Şifre</label>
+          </div>
+          <div class="  mt-4 mb-4">
+            <span style="font-size: 14px;">
+              Kabul Et ve Üye Ol'u tıklayarak, Find A Job'un <strong>Gizlilik Politikasını</strong> Gizlilik Politikasını ve <strong>Üyelik Sözleşmesini</strong>  kabul etmiş olursunuz.
+            </span>
+          </div>
+
+
+          <button class="w-100 btn btn-lg btn-primary mb-4"  [disabled]="signupForm.invalid" (click)="signup()">Kabul Et ve Üye Ol</button>
+            <div class="mb-5 text-center">
+            <span>Zaten üye misiniz? <a routerLink="/login"><strong style="color: #912da2;">Giriş Yap</strong></a></span>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.btn-primary{
+  color: white;
+    border-color: #912da2;
+    border: none;
+    background-color: #912da2;
+}
+.btn-primary:hover{
+  color: white;
+  background: #912da2;
+  border: none;
+}
+
+.searchForm{
+  width: 100%;height: 100%;
+}
+.searchInputForm{
+  width: 100%;height: 100%;
+  border: 1px solid rgb(0,0,0,0.6);
+  background: none;
+}
+
+

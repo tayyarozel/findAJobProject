@@ -1,0 +1,38 @@
+
+.btn-outline-primary{
+  color: #ffffff;
+    border-color: #912da2;
+    background: none;
+}
+.btn-primary{
+  color: #ffffff;
+    border-color: #912da2;
+    background: #912da2;
+}
+.btn-primary:hover{
+  color: white;
+  background: #912da2;
+}
+.naviLogo{
+  color:#912da2
+}
+
+.naviItem{
+  font-weight: bold;
+  font-size: 15px;
+}
+.navbar-light .navbar-toggler{
+  color: black;
+  border: none;
+}
+.dropdownTitle{
+  font-size: 15px;
+}
+.register{
+  width: 100%;font-weight: bold;font-size: 15px;color:black
+
+}
+.login{
+  width: 100%;font-weight: bold;font-size: 15px;
+
+}

@@ -1,0 +1,16 @@
+
+.naviComp{
+  background-color: #fff;
+  border-bottom: 1px solid rgb(0,0,0,0.08);
+}
+
+.routeComp{
+  background-color: #f5f5f5;
+}
+
+.footComp{
+  background-color: #fff;
+  border-top: 1px solid rgb(0,0,0,0.08);
+}
+
+

@@ -1,0 +1,74 @@
+<div class="col-12  ">
+  <nav class=" navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+      <a class="navbar-brand naviLogo" routerLink="/"> <strong >Find A Job</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto naviItem">
+          <li class="nav-item "  >
+            <a class="nav-link active " aria-current="page" routerLink="jobs" ><span>İş İlanları </span> <i class="fa-solid fa-briefcase"></i></a>
+          </li>
+
+          <li *ngIf="isAuthenticated()" class="nav-item">
+            <a class="nav-link " aria-current="page" href="#"><span>Mesaj </span> <i class="fa-solid fa-envelope"></i></a>
+          </li>
+
+        </ul>
+        <ul *ngIf="isAuthenticated()" class="navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="https://github.com/mdo.png" alt="mdo" width="40" height="40" class="rounded-circle">
+              <strong> Tayyar </strong>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <strong class="p-3" >Tayyar Özel</strong><br>
+                <a class="dropdown-item" href="#"><button type="button" class="btn btn-outline-primary btn-sm"
+                    style="width: 100%;">Profili Görüntüle</button>
+
+                </a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <strong class="p-3 dropdownTitle">Hesap</strong><br>
+                <a class="dropdown-item" href="#">Ayarlar<br></a>
+
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li>
+                <strong class="p-3 dropdownTitle">Yönet</strong><br>
+                <a class="dropdown-item" href="#">Başvurularım<br></a>
+
+                <a class="dropdown-item" href="#"> İlanlarım<br></a>
+                <a class="dropdown-item" href="#">Şirketlerim<br></a>
+
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" (click)="logOut()">Oturumu Kapat</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul  class="navbar-nav ">
+          <li class="nav-item ">
+            <a  aria-current="page" routerLink="signup"><button type="button" class="btn btn-outline-light mb-1 mt-1 register">Üye Ol <i class="fa-solid fa-user-plus"></i></button></a>
+          </li>
+          <li class="nav-item ">
+            <a routerLink="login"><button type="button" class="btn btn-primary mb-1 mt-1 login"> Giriş Yap <i class="fa-solid fa-user"></i> </button> </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</div>

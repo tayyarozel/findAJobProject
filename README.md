@@ -4,5 +4,9 @@
 Bu proje iş ilanlarının yer aldığı, kullanıcıların iş ilanlarına başvurabilmeleri, kullanıcıların iş alımları yapabilmeleri için şirket oluşturup bu şirketler üzerinden ilan yayınlayabildikleri ve birçok alternatifin yer aldığı bir projedir. Proje çok katmanlı mimari ile geliştirilmektedir. Front-end tarafı Angular, Back-end tarafında ise C# kullanılarak birden fazla uygulama ile anlık iletişim kurabilmesi için Asp.Net Core Web Api ile kodlanmaktadır. Veritabanı olarak MSSQL kullanılmaktadır. </br>
 
 
-Projeye geliştirmeler yapıldıkca burası güncellenecektir..
+**Login Page**
+![Login Sayfası Resmi](https://raw.githubusercontent.com/tayyarozel/findAJobProject/main/images/login.jpg)
 
+**Signup Page**
+![Signup Sayfası Resmi](https://raw.githubusercontent.com/tayyarozel/findAJobProject/main/images/signup.jpg)
+Projeye geliştirmeler yapıldıkca burası güncellenecektir..

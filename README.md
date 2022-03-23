@@ -9,4 +9,7 @@ Bu proje iş ilanlarının yer aldığı, kullanıcıların iş ilanlarına baş
 
 **Signup Page**
 ![Signup Sayfası Resmi](https://raw.githubusercontent.com/tayyarozel/findAJobProject/main/images/signup-2.jpg)
+
+**Settings Page**
+![Settings Sayfası Resmi](https://raw.githubusercontent.com/tayyarozel/findAJobProject/main/images/settings.jpg)
 Projeye geliştirmeler yapıldıkca burası güncellenecektir..
